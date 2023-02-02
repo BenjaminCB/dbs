@@ -1,0 +1,14 @@
+1.1 ad
+1.2 aeg
+2.1 (handsin h) (h.sid) (sid) ()
+2.2 (COUNT *) (handsin h) (h.eid) (h.achievedpoints)
+3.1 (count(*)) (sid = 3 AND h.achievedpoints >= 0.5 * e.maxpoints) (sid = sid) (handsin) (eid = eid) (exercisesheet)
+4.1 abd
+4.2 aegi
+4.3 aegi
+5.1 e
+6.1 afhior
+6.2 T1 waits for T2 waits for T3 waits for T1
+7.1 c
+7.2 a
+7.3 bf

@@ -1,0 +1,28 @@
+1.1 bc
+1.2 age
+2.1
+    SELECT s.sid, s.firstname, s.lastname
+    FROM student s JOIN handsin h ON s.sid = h.sid
+    GROUP BY s.sid, s.firstname, s.lastname
+    HAVING COUNT(DISTINCT h.eid) = (SELECT COUNT(*) FROM exercisesheet);
+2.2
+    WITH numpassing AS (
+        SELECT e.eid, COUNT(DISTINCT h.eid) AS numpass
+        FROM exercisesheet e LEFT OUTER JOIN handsin h
+            ON e.eid = h.eid AND h.achievedpoints >= e.maxpoints * 0.5
+        GROUP BY e.eid
+    )
+    SELECT e.eid, ((p.numpass * 100) / COUNT(*)) AS passingRate
+    FROM numpassing p NATURAL JOIN exercisesheet e NATURAL JOIN handsin h
+    GROUP BY e.eid, p.numpass
+3.1
+    1:
+4.1 abd
+4.2 aegi
+4.3 a
+5.1 b
+6.1 afhior
+6.2 123 and 25
+7.1 c
+7.2 a
+7.3 cf
